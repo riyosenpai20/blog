@@ -3,6 +3,18 @@
   <head>
     <title>Blog</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        }
+      }
+    </script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +23,8 @@
   </head>
 
   <body>
+  <div class="container mx-auto m-5">
     <%= yield %>
+  </div>
   </body>
 </html>
